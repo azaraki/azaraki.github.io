@@ -929,6 +929,317 @@ html {
     font-weight: 600 !important;
 }
 
+/* Landing page overview sections */
+.overview-sections {
+    margin: 4rem 0;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.overview-item {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #0066cc;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.overview-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #f0f0f0;
+}
+
+.overview-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #0066cc;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.overview-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.overview-content h3 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.overview-content h3 a:hover {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.overview-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.overview-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-tag {
+    background: white;
+    color: #0066cc;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #0066cc;
+    font-weight: 500;
+}
+
+.overview-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat-mini {
+    text-align: center;
+    background: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    min-width: 70px;
+}
+
+.stat-mini .stat-number {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 0.2rem;
+}
+
+.stat-mini .stat-label {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.overview-link {
+    color: #0066cc;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.overview-link:hover {
+    color: #004499;
+    text-decoration: none;
+}
+
+.overview-link i {
+    transition: transform 0.2s;
+}
+
+.overview-item:hover .overview-link i {
+    transform: translateX(3px);
+}
+
+/* Recent highlights section */
+.recent-highlights {
+    margin: 4rem 0;
+    padding: 2rem 0;
+    background: #f8f8f8;
+    border-radius: 12px;
+}
+
+.recent-highlights h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.highlight-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.highlight-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #0066cc;
+    color: white;
+    border-radius: 50%;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.highlight-content h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.highlight-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* News section */
+.news-updates {
+    margin: 4rem 0;
+}
+
+.news-updates h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.news-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #0066cc;
+    font-weight: 600;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.news-content h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.news-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Contact CTA section */
+.contact-cta {
+    margin: 4rem 0;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #0066cc, #004499);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.cta-content p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: white;
+    color: #0066cc;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+    color: #004499;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #0066cc;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
 /* Responsive adjustments for new content */
 @media (max-width: 768px) {
     .course-header {
@@ -956,5 +1267,41 @@ html {
     .award-year {
         width: auto;
         font-size: 1rem;
+    }
+    
+    /* Landing page responsive */
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .news-date {
+        width: auto;
+        font-weight: 700;
+        color: #333;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .contact-cta {
+        padding: 2rem 1rem;
     }
 }
