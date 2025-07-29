@@ -3,436 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Abolfazl Zaraki - Senior Lecturer in Robotics and AI</title>
+    <title>Abolfazl Zaraki</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <nav class="sidebar-nav">
-                <ul>
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#research" class="nav-link">Research</a></li>
-                    <li><a href="#publications" class="nav-link">Publications</a></li>
-                    <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                    <li><a href="#students" class="nav-link">Students</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+    <header class="site-header">
+        <div class="wrapper">
+            <div class="site-title">
+                <a href="index.html">Abolfazl Zaraki</a>
+            </div>
+            <nav class="site-nav">
+                <div class="nav-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <a href="research.html" class="page-link">Research</a>
+                    <a href="publications.html" class="page-link">Publications</a>
+                    <a href="teaching.html" class="page-link">Teaching</a>
+                    <a href="students.html" class="page-link">Students</a>
+                    <a href="experience.html" class="page-link">Experience</a>
+                    <a href="CV-Abolfazl Zaraki-UH .pdf" class="page-link" target="_blank">CV</a>
+                </div>
             </nav>
-        </aside>
+        </div>
+    </header>
 
-        <main class="main-content">
-            <section id="home" class="profile-header">
-                <div class="profile-info">
-                    <div class="profile-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
+    <main class="page-content">
+        <div class="wrapper">
+            <section class="home-section">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="Abolfazl_Zaraki.webp" alt="Abolfazl Zaraki" class="profile-photo">
                     </div>
-                    <div class="profile-details">
-                        <h1>Dr. Abolfazl Zaraki</h1>
-                        <h2>Senior Lecturer in Robotics and AI</h2>
+                    <div class="profile-info">
+                        <h1>Abolfazl Zaraki</h1>
+                        <p class="title">Senior Lecturer in Robotics and AI</p>
                         <p class="affiliation">School of Physics, Engineering and Computer Science<br>
                         University of Hertfordshire, United Kingdom</p>
                         
-                        <div class="contact-links">
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:a.zaraki@herts.ac.uk">a.zaraki@herts.ac.uk</a></p>
-                            <p><i class="fab fa-google"></i> <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> <a href="mailto:a.zaraki@herts.ac.uk">a.zaraki@herts.ac.uk</a></p>
+                            <p><strong>Links:</strong> 
+                                <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="brief-bio">
+
+                <div class="bio-section">
                     <p>I am a Senior Lecturer in Robotics and AI at the University of Hertfordshire, with extensive experience in artificial intelligence, robotics, and human-robot interaction. My research focuses on developing intelligent systems that can adapt and interact naturally with humans, particularly in the areas of bio-inspired attention systems, reinforcement learning for robotic control, and assistive technologies for children with autism.</p>
-                </div>
-            </section>
-
-            <section id="research" class="content-section">
-                <h2>Research Interests</h2>
-                <div class="research-areas">
-                    <ul class="research-list">
-                        <li>Artificial Intelligence and Machine Learning</li>
-                        <li>Human-Robot Interaction (HRI)</li>
-                        <li>Bio-inspired Attention Systems</li>
-                        <li>Reinforcement Learning for Robotics</li>
-                        <li>Assistive Robotics for Children with Autism</li>
-                        <li>Computer Vision and Cognitive Systems</li>
-                        <li>Large Language Models in Robotics</li>
-                        <li>Social Robotics and Therapeutic Applications</li>
-                    </ul>
-                </div>
-                
-                <h3>Current Research Focus</h3>
-                <p>My current research focuses on developing intelligent robotic systems that can naturally interact with humans, particularly in therapeutic and educational contexts. I am working on bio-inspired attention mechanisms for social robots, reinforcement learning approaches for adaptive robotic behavior, and the integration of large language models in human-robot interaction scenarios.</p>
-            </section>
-
-
-
-            <section id="publications" class="content-section">
-                <h2>Publications</h2>
-                <div class="publications-intro">
-                    <p>Complete list of publications in robotics, artificial intelligence, and human-robot interaction. For citations and metrics, please see my <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
-                </div>
-
-                <div class="publication-categories">
-                    <div class="pub-category">
-                        <h3>Peer-Reviewed Journal Articles</h3>
-                        <div class="pub-numbered-list">
-                            <div class="pub-item">
-                                <span class="pub-number">[1]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>K. Ghamati, M. Dehkord, A. Zaraki</strong></span>
-                                    <span class="pub-title"><a href="publications/ai-powered-applications-llm-hri/">"Towards AI-Powered Applications: The Development of a Personalised LLM for HRI and HCI."</a></span>
-                                    <span class="pub-venue"><em>Sensors Journal</em>, vol. 25, 2025.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[2]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>K. Ghamati, A. Zaraki</strong></span>
-                                    <span class="pub-title">"Learning to Gaze: Bio-Inspired Attention Adaptation for Social Robots"</span>
-                                    <span class="pub-venue"><em>Scientific Reports (Nature Journal)</em>, 2025.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[3]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>H. Rahimi, A. Zaraki, H. Voos</strong></span>
-                                    <span class="pub-title">"Actor–critic learning based PID control for robotic manipulators."</span>
-                                    <span class="pub-venue"><em>Applied Soft Computing Journal</em>, vol. 151, 2024.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[4]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>H. Fahham, A. Zaraki, G. Tucker, M. W Spong</strong></span>
-                                    <span class="pub-title">"Time-optimal velocity tracking control for consensus formation of multiple nonholonomic mobile robots."</span>
-                                    <span class="pub-venue"><em>Sensors</em>, 2021.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[5]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>G. Lakatos, L. J. Wood, D. S. Syrdal, B. Robins, A. Zaraki, K. Dautenhahn</strong></span>
-                                    <span class="pub-title"><a href="publications/robot-mediated-intervention-autism-children/">"Robot-mediated intervention can assist children with autism to develop visual perspective-taking skills."</a></span>
-                                    <span class="pub-venue"><em>Paladyn, Journal of Behavioral Robotics</em>, vol. 12, no. 1, pp. 87-101, 2021.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[6]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>A. Zaraki, M.Khamesi, L. Wood, G. Lakatos, C. Tzafestas, F. Amirabdollahian, B. Robins, K. Dautenhahn</strong></span>
-                                    <span class="pub-title">"A Novel Reinforcement-Based Paradigm for Children to Teach the Humanoid Kaspar Robot"</span>
-                                    <span class="pub-venue"><em>International Journal of Social Robotics</em>, pp. 1-12, 2019.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[7]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>L. Wood, A. Zaraki, B. Robins, K. Dautenhahn</strong></span>
-                                    <span class="pub-title">"Developing Kaspar: A Humanoid Robot for Children with Autism"</span>
-                                    <span class="pub-venue"><em>International Journal of Social Robotics</em>, 2019.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[8]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>L. Wood, B. Robins, G. Lakatos, D.S. Syrdal, A. Zaraki, K. Dautenhahn</strong></span>
-                                    <span class="pub-title">"Developing a protocol and experimental setup for using a humanoid robot to assist children with autism to develop visual perspective taking skills"</span>
-                                    <span class="pub-venue"><em>Paladyn, Journal of Behavioral Robotics</em>, pp. 167-179, 2019.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[9]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>A. Zaraki, M. Pieroni, D. De Rossi, D. Mazzei, R. Garofalo, L. Cominelli, M. Banitalebi Dehkordi</strong></span>
-                                    <span class="pub-title">"Design and Evaluation of a Unique Social Perception System for Human-Robot Interaction."</span>
-                                    <span class="pub-venue"><em>IEEE Transactions on Cognitive and Developmental Systems</em>, vol. 9, no. 4, pp. 341-355, 2017.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[10]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>A. Zaraki, M.Ghalambaz, Ali J Chamkha, D. De Rossi</strong></span>
-                                    <span class="pub-title">"Mathematical modelling: Theoretical analysis of natural convection boundary layer heat and mass transfer of nanofluids: Effects of size, shape and type of nanoparticles, type of base fluid and working temperature"</span>
-                                    <span class="pub-venue"><em>Advanced Powder Technology</em>, pp. 935-946, 2015.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[11]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>A. Zaraki, D. Mazzei, M Giuliani, D. De Rossi</strong></span>
-                                    <span class="pub-title">"Designing and Evaluating a Social Gaze-Control System for a Humanoid Robot"</span>
-                                    <span class="pub-venue"><em>IEEE Transactions on Human-Machine Systems</em>, vol. 44, no. 2, pp. 157-168, 2014.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-category">
-                        <h3>Conference Papers</h3>
-                        <div class="pub-numbered-list">
-                            <div class="pub-item">
-                                <span class="pub-number">[1]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>K. Ghamati, A. Zaraki, F. Amirabdullahian</strong></span>
-                                    <span class="pub-title"><a href="publications/ari-humanoid-robot-gaze-rl/">"ARI humanoid robot imitates human gaze behaviour using reinforcement learning in real-world environments."</a></span>
-                                    <span class="pub-venue"><em>IEEE-RAS 23rd International Conference on Humanoid Robots (Humanoids)</em>, pp. 653-660, France, 2024.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[2]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>G. Lakatos, L. J. Wood, A. Zaraki, B. Robins, K. Dautenhahn, F. Amirabdollahian</strong></span>
-                                    <span class="pub-title">"Effects of previous exposure on children's perception of a humanoid robot."</span>
-                                    <span class="pub-venue"><em>International Conference on Social Robotics</em>, pp. 14-23, Springer, Cham, 2019.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[3]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>A. Zaraki, L. Wood, B. Robins, K.Dautenhahn</strong></span>
-                                    <span class="pub-title">"Development of a Semi-Autonomous Robotic System to Assist Children with Autism in Developing Visual Perspective Taking Skills"</span>
-                                    <span class="pub-venue"><em>Proceedings of the 27th IEEE International Symposium on Robot and Human Interactive Communication (Ro-MAN 2018)</em>, pp. 969-976, China, 2018.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[4]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>A. Zaraki, M Giuliani, M. B. Dehkordi, D. Mazzei, D. De Rossi</strong></span>
-                                    <span class="pub-title">"An RGBD Based Social Behaviour Interpretation System for a Humanoid Social Robot"</span>
-                                    <span class="pub-venue"><em>Robotics and Mechatronics, Second RSI/ISM International Conference</em>, pp. 185-190, 2014. <strong>(BEST PAPER AWARD)</strong></span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[5]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>D. Mazzei, A. Zaraki, N. Lazzeri, D. De Rossi</strong></span>
-                                    <span class="pub-title">"Recognition and Expression of Emotions by a Symbiotic Android Head"</span>
-                                    <span class="pub-venue"><em>IEEE Conference Humanoid</em>, pp. 134-139, 2014.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item show-more-conferences" style="display: none;">
-                                <span class="pub-number">[...]</span>
-                                <div class="pub-content">
-                                    <span class="pub-note">Additional 23+ conference papers available. <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">View complete list on Google Scholar</a></span>
-                                </div>
-                            </div>
-
-                            <div class="show-more-btn">
-                                <button onclick="toggleConferencePapers()" class="expand-btn">Show All Conference Papers (28 total)</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-category">
-                        <h3>Book Chapters</h3>
-                        <div class="pub-numbered-list">
-                            <div class="pub-item">
-                                <span class="pub-number">[1]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>H. Samani, A. Zaraki, D. Davies, N. Fernando</strong></span>
-                                    <span class="pub-title"><a href="publications/robotic-cognitive-behavioural-therapy/">"Robotic Cognitive Behavioural Therapy: rCBT"</a></span>
-                                    <span class="pub-venue"><em>International Conference of Social Robotics</em>, 2024.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[2]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>M. B. Dehkordi, R. Mansy, A. Zaraki, A. Singh, R. Setchi</strong></span>
-                                    <span class="pub-title">"Explainability in Human-Robot Teaming."</span>
-                                    <span class="pub-venue"><em>Procedia Computer Science</em>, 2021.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item">
-                                <span class="pub-number">[3]</span>
-                                <div class="pub-content">
-                                    <span class="pub-authors"><strong>M. B. Dehkordi, A. Zaraki, R. Setchi</strong></span>
-                                    <span class="pub-title">"Feature extraction and feature selection in smartphone-based activity recognition."</span>
-                                    <span class="pub-venue"><em>Procedia Computer Science</em>, vol. 176, pp. 2655-2664, 2020.</span>
-                                </div>
-                            </div>
-
-                            <div class="pub-item show-more-chapters" style="display: none;">
-                                <span class="pub-number">[...]</span>
-                                <div class="pub-content">
-                                    <span class="pub-note">Additional 7+ book chapters available. <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">View complete list on Google Scholar</a></span>
-                                </div>
-                            </div>
-
-                            <div class="show-more-btn">
-                                <button onclick="toggleBookChapters()" class="expand-btn">Show All Book Chapters (10 total)</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-summary">
-                    <div class="pub-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Total Publications</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">12</span>
-                            <span class="stat-label">Journal Articles</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">28</span>
-                            <span class="stat-label">Conference Papers</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10</span>
-                            <span class="stat-label">Book Chapters</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="teaching" class="content-section">
-                <h2>Teaching</h2>
-                <h3>Current Courses (University of Hertfordshire)</h3>
-                <ul class="teaching-list">
-                    <li><strong>7COM1032:</strong> Artificial Life with Robotics - Autumn Semester (300+ students)</li>
-                    <li><strong>7COM1034:</strong> Artificial Intelligence Theory and Practice (300+ students)</li>
-                    <li><strong>6COM2011:</strong> Robotic Module - Spring Semester (20 students)</li>
-                    <li><strong>4COM1050:</strong> Python Programming (DTS)</li>
-                </ul>
-                
-                <h3>Previous Courses (Cardiff University)</h3>
-                <ul class="teaching-list">
-                    <li><strong>EN2037:</strong> Control and Instrumentation - Spring Semester (175 students)</li>
-                    <li><strong>EN3062:</strong> Robotics and Image Processing - Autumn Semester (85 students)</li>
-                    <li><strong>EN4062:</strong> Advanced Robotics - Spring Semester (35 students)</li>
-                </ul>
-            </section>
-            
-            <section id="students" class="content-section">
-                <h2>Students</h2>
-                <h3>Current Supervision</h3>
-                <ul class="student-list">
-                    <li>1 PhD Student (Principal Supervisor)</li>
-                    <li>30+ Master's Students</li>
-                    <li>Multiple BSc Students</li>
-                </ul>
-            </section>
-
-
-            <section id="experience" class="content-section">
-                <h2>Professional Experience</h2>
-                <div class="experience-list">
-                    <div class="exp-item">
-                        <div class="exp-period">Dec 2021 - Present</div>
-                        <div class="exp-details">
-                            <h3>Senior Lecturer in Robotics and AI</h3>
-                            <p class="exp-institution">University of Hertfordshire, UK</p>
-                            <p>School of Physics, Engineering and Computer Science (SPECS). Fellowship of UK Higher Education Academy (FHEA).</p>
-                        </div>
-                    </div>
                     
-                    <div class="exp-item">
-                        <div class="exp-period">Jan 2020 - Dec 2021</div>
-                        <div class="exp-details">
-                            <h3>Lecturer (Teaching and Research)</h3>
-                            <p class="exp-institution">Cardiff University, UK</p>
-                            <p>School of Engineering, Research Centre in AI, Robotics and Human-Machine Systems (IROHMS).</p>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-item">
-                        <div class="exp-period">Dec 2018 - Dec 2019</div>
-                        <div class="exp-details">
-                            <h3>Postdoctoral Researcher</h3>
-                            <p class="exp-institution">University of Reading, UK</p>
-                            <p>Department of Biomedical Engineering - INSIGHT (Innovate UK Funded Project).</p>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-item">
-                        <div class="exp-period">July 2016 - Dec 2018</div>
-                        <div class="exp-details">
-                            <h3>Postdoctoral Research Fellow - Technical Lead</h3>
-                            <p class="exp-institution">University of Hertfordshire, UK</p>
-                            <p>Computer Science Department - BabyRobot European project.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-item">
-                        <div class="exp-period">Feb 2015 - July 2016</div>
-                        <div class="exp-details">
-                            <h3>Postdoctoral Research Fellow</h3>
-                            <p class="exp-institution">University of Pisa, Italy</p>
-                            <p>Centro di Ricerca "E. Piaggio" - EASEL European project and JAMES European Project.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <h3>Education</h3>
-                <div class="education-list">
-                    <div class="edu-item">
-                        <div class="edu-period">2011 - 2014</div>
-                        <div class="edu-details">
-                            <h4>PhD in Automatic Robotics and Bioengineering</h4>
-                            <p>University of Pisa, Italy - Centro di Ricerca "E. Piaggio"</p>
-                        </div>
-                    </div>
-                    
-                    <div class="edu-item">
-                        <div class="edu-period">2007 - 2009</div>
-                        <div class="edu-details">
-                            <h4>Master of Mechatronics and Automatic Control</h4>
-                            <p>University Technology Malaysia (UTM)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="edu-item">
-                        <div class="edu-period">2001 - 2006</div>
-                        <div class="edu-details">
-                            <h4>Bachelor of Electrical - Electronic Engineering</h4>
-                            <p>Azad University, Iran</p>
-                        </div>
-                    </div>
+                    <p>My work spans multiple domains including bio-inspired attention systems, reinforcement learning for robotic control, and assistive technologies for children with autism. I have published extensively in top-tier journals and conferences, contributing to both theoretical advances and practical applications in the field of robotics and AI.</p>
                 </div>
             </section>
-            
-            <section id="contact" class="content-section">
-                <h2>Contact</h2>
-                <div class="contact-info-simple">
-                    <p><strong>Office:</strong> School of Physics, Engineering and Computer Science<br>
-                    University of Hertfordshire, Hatfield, UK</p>
-                    <p><strong>Email:</strong> <a href="mailto:a.zaraki@herts.ac.uk">a.zaraki@herts.ac.uk</a></p>
-                    <p><strong>Google Scholar:</strong> <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">Profile</a></p>
-                </div>
-            </section>
-        </main>
 
-        <footer class="footer">
-            <div class="institutional-logos">
-                <p>&copy; 2024 Dr. Abolfazl Zaraki - University of Hertfordshire</p>
-            </div>
-        </footer>
-    </div>
-    
+            <section class="overview-sections">
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3><a href="research.html">Research</a></h3>
+                            <p>My research focuses on developing intelligent robotic systems that can naturally interact with humans, spanning human-robot interaction, bio-inspired attention systems, reinforcement learning, and assistive technologies.</p>
+                            <div class="overview-highlights">
+                                <span class="highlight-tag">Human-Robot Interaction</span>
+                                <span class="highlight-tag">Bio-Inspired AI</span>
+                                <span class="highlight-tag">Reinforcement Learning</span>
+                            </div>
+                            <a href="research.html" class="overview-link">Learn more about my research <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3><a href="publications.html">Publications</a></h3>
+                            <p>I have published 50+ peer-reviewed papers in leading journals and conferences in robotics, artificial intelligence, and human-robot interaction, contributing to both theoretical advances and practical applications.</p>
+                            <div class="overview-stats">
+                                <div class="stat-mini">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Publications</span>
+                                </div>
+                                <div class="stat-mini">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Journal Articles</span>
+                                </div>
+                                <div class="stat-mini">
+                                    <span class="stat-number">28</span>
+                                    <span class="stat-label">Conference Papers</span>
+                                </div>
+                            </div>
+                            <a href="publications.html" class="overview-link">View all publications <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3><a href="teaching.html">Teaching</a></h3>
+                            <p>I am passionate about education and teach courses in robotics, artificial intelligence, and engineering. My teaching philosophy emphasizes hands-on learning, critical thinking, and practical applications.</p>
+                            <div class="overview-highlights">
+                                <span class="highlight-tag">Artificial Intelligence</span>
+                                <span class="highlight-tag">Robotics</span>
+                                <span class="highlight-tag">Python Programming</span>
+                            </div>
+                            <a href="teaching.html" class="overview-link">Explore my teaching <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3><a href="students.html">Students</a></h3>
+                            <p>I supervise and mentor students at various levels, guiding the next generation of researchers and practitioners in robotics, AI, and related fields through innovative research projects.</p>
+                            <div class="overview-stats">
+                                <div class="stat-mini">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">PhD Student</span>
+                                </div>
+                                <div class="stat-mini">
+                                    <span class="stat-number">30+</span>
+                                    <span class="stat-label">Master's Students</span>
+                                </div>
+                            </div>
+                            <a href="students.html" class="overview-link">Student opportunities <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3><a href="experience.html">Experience</a></h3>
+                            <p>My professional journey spans over a decade in academia, with experience in teaching, research, and academic leadership across multiple institutions in the UK, Italy, Germany, and Malaysia.</p>
+                            <div class="overview-highlights">
+                                <span class="highlight-tag">University of Hertfordshire</span>
+                                <span class="highlight-tag">Cardiff University</span>
+                                <span class="highlight-tag">University of Pisa</span>
+                            </div>
+                            <a href="experience.html" class="overview-link">View my experience <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-highlights">
+                <h2>Recent Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h4>Fellowship Recognition</h4>
+                            <p>Awarded Fellowship of UK Higher Education Academy (FHEA) in recognition of excellence in university teaching and student learning support.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h4>Latest Research</h4>
+                            <p>Published cutting-edge research on AI-powered applications and bio-inspired attention systems for social robots in top-tier journals.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h4>International Collaboration</h4>
+                            <p>Leading collaborative research projects with institutions across Europe and contributing to major international robotics initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news-updates">
+                <h2>Recent News</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-date">March 2025</div>
+                        <div class="news-content">
+                            <h4>New Publication in Sensors Journal</h4>
+                            <p>Our latest paper on "Towards AI-Powered Applications: The Development of a Personalised LLM for HRI and HCI" has been published in Sensors Journal.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-date">December 2024</div>
+                        <div class="news-content">
+                            <h4>Research Presented at Humanoids Conference</h4>
+                            <p>Presented research on "ARI humanoid robot imitates human gaze behaviour using reinforcement learning" at IEEE-RAS Humanoids Conference in France.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-date">September 2024</div>
+                        <div class="news-content">
+                            <h4>New Academic Year</h4>
+                            <p>Starting new academic year with expanded course offerings in AI and robotics, teaching 300+ students across multiple programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-cta">
+                <div class="cta-content">
+                    <h2>Interested in Collaboration?</h2>
+                    <p>I welcome opportunities for research collaboration, student supervision, and academic partnerships. Feel free to reach out to discuss potential projects or opportunities.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:a.zaraki@herts.ac.uk" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                        <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-google"></i> Google Scholar
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>&copy; 2024 Abolfazl Zaraki - University of Hertfordshire</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

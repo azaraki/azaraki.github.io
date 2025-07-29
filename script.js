@@ -1,53 +1,67 @@
-// Academic Website JavaScript - Jan Peters Style
+// Academic Website JavaScript - Bilge Mutlu Style
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.sidebar-nav a');
+    // Mobile navigation toggle
+    const navTrigger = document.querySelector('.nav-trigger');
+    const navMenu = document.querySelector('.nav-menu');
     
+    if (navTrigger && navMenu) {
+        navTrigger.addEventListener('click', function() {
+            navTrigger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(nav => nav.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            // Get target section
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerHeight = document.querySelector('.site-header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                if (navMenu && navMenu.classList.contains('active')) {
+                    navTrigger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
             }
         });
     });
-    
-    // Highlight active section on scroll
-    const sections = document.querySelectorAll('.content-section, .profile-header');
-    const navItems = document.querySelectorAll('.sidebar-nav a');
+
+    // Active navigation highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.page-link[href^="#"]');
     
     function highlightActiveSection() {
-        let currentSection = '';
+        const scrollPosition = window.scrollY + 150;
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
             
-            if (window.pageYOffset >= (sectionTop - 100)) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        
-        // Update navigation
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === '#' + currentSection) {
-                item.classList.add('active');
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${sectionId}`) {
+                        item.classList.add('active');
+                        item.style.color = '#0066cc';
+                        item.style.fontWeight = '600';
+                    } else {
+                        item.style.color = '#333';
+                        item.style.fontWeight = '400';
+                    }
+                });
             }
         });
     }
@@ -63,33 +77,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set initial active state
     highlightActiveSection();
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (!navTrigger.contains(e.target) && !navMenu.contains(e.target)) {
+                navTrigger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        }
+    });
+    
+    // Handle profile photo error (if image doesn't exist)
+    const profilePhoto = document.querySelector('.profile-photo');
+    if (profilePhoto) {
+        profilePhoto.addEventListener('error', function() {
+            this.style.backgroundImage = 'none';
+            this.style.backgroundColor = '#f0f0f0';
+            this.style.border = '2px dashed #ccc';
+            this.style.display = 'flex';
+            this.style.alignItems = 'center';
+            this.style.justifyContent = 'center';
+            this.style.color = '#999';
+            this.style.fontSize = '3rem';
+            this.innerHTML = '👤';
+        });
+    }
 });
-
-// Publications expand/collapse functionality
-function toggleConferencePapers() {
-    const btn = document.querySelector('.expand-btn');
-    const showMoreItems = document.querySelectorAll('.show-more-conferences');
-    
-    if (btn.textContent.includes('Show All')) {
-        // Show all conference papers - in a real implementation, you'd load the full list
-        btn.textContent = 'Show Less Conference Papers';
-        showMoreItems.forEach(item => item.style.display = 'flex');
-    } else {
-        btn.textContent = 'Show All Conference Papers (28 total)';
-        showMoreItems.forEach(item => item.style.display = 'none');
-    }
-}
-
-function toggleBookChapters() {
-    const btns = document.querySelectorAll('.expand-btn');
-    const btn = btns[1]; // Second button is for book chapters
-    const showMoreItems = document.querySelectorAll('.show-more-chapters');
-    
-    if (btn.textContent.includes('Show All')) {
-        btn.textContent = 'Show Less Book Chapters';
-        showMoreItems.forEach(item => item.style.display = 'flex');
-    } else {
-        btn.textContent = 'Show All Book Chapters (10 total)';
-        showMoreItems.forEach(item => item.style.display = 'none');
-    }
-}
