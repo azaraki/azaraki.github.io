@@ -3,229 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Abolfazl Zaraki - Academic Profile</title>
+    <title>Dr. Abolfazl Zaraki - Senior Lecturer in Robotics and AI</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-brand">Dr. Abolfazl Zaraki</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                    <li><a href="#students" class="nav-link">Students</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Dr. Abolfazl Zaraki</h1>
-                <h2>PhD, FHEA</h2>
-                <p class="hero-subtitle">Senior Lecturer in Robotics and AI</p>
-                <p class="hero-affiliation">University of Hertfordshire</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-google"></i> Google Scholar
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p class="lead">
-                        I am a Senior Lecturer in Robotics and AI at the University of Hertfordshire, 
-                        with extensive experience in artificial intelligence, robotics, and human-robot interaction. 
-                        My research focuses on developing intelligent systems that can adapt and interact naturally with humans.
-                    </p>
-                    <div class="research-interests">
-                        <h3>Research Interests</h3>
-                        <div class="interests-grid">
-                            <div class="interest-item">
-                                <i class="fas fa-robot"></i>
-                                <span>Artificial Intelligence</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-cogs"></i>
-                                <span>Robotics</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-handshake"></i>
-                                <span>Human-Robot Interaction</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-brain"></i>
-                                <span>Machine Learning</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-eye"></i>
-                                <span>Computer Vision</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-microchip"></i>
-                                <span>Cognitive Systems</span>
-                            </div>
+        <main class="main-content">
+            <section id="home" class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-photo">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="profile-details">
+                        <h1>Dr. Abolfazl Zaraki</h1>
+                        <h2>Senior Lecturer in Robotics and AI</h2>
+                        <p class="affiliation">School of Physics, Engineering and Computer Science<br>
+                        University of Hertfordshire, United Kingdom</p>
+                        
+                        <div class="contact-links">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:a.zaraki@herts.ac.uk">a.zaraki@herts.ac.uk</a></p>
+                            <p><i class="fab fa-google"></i> <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="education" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>PhD in Automatic Robotics and Bioengineering</h3>
-                            <p class="institution">University of Pisa, Italy</p>
-                            <p class="period">2011 - 2014</p>
-                            <p class="description">Centro di Ricerca "E. Piaggio"</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Visiting Researcher</h3>
-                            <p class="institution">Technical University of Munich (TUM), Germany</p>
-                            <p class="period">April 2013 - November 2013</p>
-                            <p class="description">Fortiss GmbH - JAMES European Project</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Master of Mechatronics and Automatic Control</h3>
-                            <p class="institution">University Technology Malaysia (UTM)</p>
-                            <p class="period">2007 - 2009</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Bachelor of Electrical - Electronic Engineering</h3>
-                            <p class="institution">Azad University, Iran</p>
-                            <p class="period">2001 - 2006</p>
-                        </div>
-                    </div>
+                
+                <div class="brief-bio">
+                    <p>I am a Senior Lecturer in Robotics and AI at the University of Hertfordshire, with extensive experience in artificial intelligence, robotics, and human-robot interaction. My research focuses on developing intelligent systems that can adapt and interact naturally with humans, particularly in the areas of bio-inspired attention systems, reinforcement learning for robotic control, and assistive technologies for children with autism.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="experience-grid">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Senior Lecturer in Robotics and AI</h3>
-                            <span class="period">Dec 2021 - Present</span>
-                        </div>
-                        <p class="institution">University of Hertfordshire, UK</p>
-                        <p class="description">School of Physics, Engineering and Computer Science (SPECS). Fellowship of UK Higher Education Academy (FHEA).</p>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Lecturer (Teaching and Research)</h3>
-                            <span class="period">Jan 2020 - Dec 2021</span>
-                        </div>
-                        <p class="institution">Cardiff University, UK</p>
-                        <p class="description">School of Engineering, Research Centre in AI, Robotics and Human-Machine Systems (IROHMS).</p>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Postdoctoral Researcher</h3>
-                            <span class="period">Dec 2018 - Dec 2019</span>
-                        </div>
-                        <p class="institution">University of Reading, UK</p>
-                        <p class="description">Department of Biomedical Engineering - INSIGHT (Innovate UK Funded Project).</p>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Postdoctoral Research Fellow - Technical Lead</h3>
-                            <span class="period">July 2016 - Dec 2018</span>
-                        </div>
-                        <p class="institution">University of Hertfordshire, UK</p>
-                        <p class="description">Computer Science Department - BabyRobot European project.</p>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Postdoctoral Research Fellow</h3>
-                            <span class="period">Feb 2015 - July 2016</span>
-                        </div>
-                        <p class="institution">University of Pisa, Italy</p>
-                        <p class="description">Centro di Ricerca "E. Piaggio" - EASEL European project and JAMES European Project.</p>
-                    </div>
+            <section id="research" class="content-section">
+                <h2>Research Interests</h2>
+                <div class="research-areas">
+                    <ul class="research-list">
+                        <li>Artificial Intelligence and Machine Learning</li>
+                        <li>Human-Robot Interaction (HRI)</li>
+                        <li>Bio-inspired Attention Systems</li>
+                        <li>Reinforcement Learning for Robotics</li>
+                        <li>Assistive Robotics for Children with Autism</li>
+                        <li>Computer Vision and Cognitive Systems</li>
+                        <li>Large Language Models in Robotics</li>
+                        <li>Social Robotics and Therapeutic Applications</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+                
+                <h3>Current Research Focus</h3>
+                <p>My current research focuses on developing intelligent robotic systems that can naturally interact with humans, particularly in therapeutic and educational contexts. I am working on bio-inspired attention mechanisms for social robots, reinforcement learning approaches for adaptive robotic behavior, and the integration of large language models in human-robot interaction scenarios.</p>
+            </section>
 
-        <section id="publications" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Publications & Research</h2>
+
+
+            <section id="publications" class="content-section">
+                <h2>Recent Publications</h2>
                 <div class="publications-intro">
-                    <p class="lead">
-                        My research has resulted in numerous peer-reviewed publications in leading journals and conferences 
-                        in robotics, artificial intelligence, and human-robot interaction.
-                    </p>
-                    <div class="publication-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-file-alt"></i>
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Publications</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-quote-right"></i>
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Citations</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span class="stat-number">H-Index</span>
-                            <span class="stat-label">Available on Scholar</span>
-                        </div>
-                    </div>
+                    <p>Selected recent publications in robotics, artificial intelligence, and human-robot interaction. For a complete list, please see my <a href="https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
                 </div>
 
-                <div class="publications-filter">
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">All Publications</button>
-                        <button class="filter-btn" data-filter="journal">Journal Articles</button>
-                        <button class="filter-btn" data-filter="chapter">Book Chapters</button>
-                        <button class="filter-btn" data-filter="conference">Conference Papers</button>
-                    </div>
-                </div>
-
-                <!-- Recent Publications -->
                 <div class="publications-list">
-                    <h3 class="publications-subtitle">Recent Publications</h3>
                     
                     <!-- Journal Articles -->
                     <div class="publication-item" data-category="journal">
