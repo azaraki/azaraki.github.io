@@ -1,14 +1,26 @@
-// Academic Website JavaScript - Bilge Mutlu Style
+// Al-folio theme JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile navigation toggle
-    const navTrigger = document.querySelector('.nav-trigger');
-    const navMenu = document.querySelector('.nav-menu');
+    const navToggler = document.querySelector('.navbar-toggler');
+    const navMenu = document.querySelector('#navbarNav');
     
-    if (navTrigger && navMenu) {
-        navTrigger.addEventListener('click', function() {
-            navTrigger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    if (navToggler && navMenu) {
+        navToggler.addEventListener('click', function() {
+            navToggler.classList.toggle('collapsed');
+            navMenu.classList.toggle('show');
+            
+            // Animate hamburger icon
+            const iconBars = navToggler.querySelectorAll('.icon-bar');
+            if (navToggler.classList.contains('collapsed')) {
+                iconBars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                iconBars[1].style.opacity = '0';
+                iconBars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                iconBars[0].style.transform = 'rotate(0) translate(0, 0)';
+                iconBars[1].style.opacity = '1';
+                iconBars[2].style.transform = 'rotate(0) translate(0, 0)';
+            }
         });
     }
 
@@ -21,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const headerHeight = document.querySelector('.site-header').offsetHeight;
+                const headerHeight = document.querySelector('.navbar').offsetHeight;
                 const targetPosition = targetSection.offsetTop - headerHeight - 20;
                 
                 window.scrollTo({
@@ -30,77 +42,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                if (navMenu && navMenu.classList.contains('active')) {
-                    navTrigger.classList.remove('active');
-                    navMenu.classList.remove('active');
+                if (navMenu && navMenu.classList.contains('show')) {
+                    navToggler.classList.add('collapsed');
+                    navMenu.classList.remove('show');
                 }
             }
         });
     });
 
-    // Active navigation highlighting
-    const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.page-link[href^="#"]');
-    
-    function highlightActiveSection() {
-        const scrollPosition = window.scrollY + 150;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${sectionId}`) {
-                        item.classList.add('active');
-                        item.style.color = '#0066cc';
-                        item.style.fontWeight = '600';
-                    } else {
-                        item.style.color = '#333';
-                        item.style.fontWeight = '400';
-                    }
-                });
-            }
-        });
-    }
-    
-    // Throttled scroll event
-    let scrollTimeout;
-    window.addEventListener('scroll', function() {
-        if (scrollTimeout) {
-            clearTimeout(scrollTimeout);
-        }
-        scrollTimeout = setTimeout(highlightActiveSection, 10);
-    });
-    
-    // Set initial active state
-    highlightActiveSection();
-    
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (navMenu && navMenu.classList.contains('active')) {
-            if (!navTrigger.contains(e.target) && !navMenu.contains(e.target)) {
-                navTrigger.classList.remove('active');
-                navMenu.classList.remove('active');
+        if (navMenu && navMenu.classList.contains('show')) {
+            if (!navToggler.contains(e.target) && !navMenu.contains(e.target)) {
+                navToggler.classList.add('collapsed');
+                navMenu.classList.remove('show');
+                
+                // Reset hamburger icon
+                const iconBars = navToggler.querySelectorAll('.icon-bar');
+                iconBars[0].style.transform = 'rotate(0) translate(0, 0)';
+                iconBars[1].style.opacity = '1';
+                iconBars[2].style.transform = 'rotate(0) translate(0, 0)';
             }
         }
     });
     
-    // Handle profile photo error (if image doesn't exist)
-    const profilePhoto = document.querySelector('.profile-photo');
-    if (profilePhoto) {
-        profilePhoto.addEventListener('error', function() {
-            this.style.backgroundImage = 'none';
-            this.style.backgroundColor = '#f0f0f0';
-            this.style.border = '2px dashed #ccc';
-            this.style.display = 'flex';
-            this.style.alignItems = 'center';
-            this.style.justifyContent = 'center';
-            this.style.color = '#999';
-            this.style.fontSize = '3rem';
-            this.innerHTML = '👤';
-        });
-    }
+    // Handle navbar scroll effect
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            navbar.style.transform = 'translateY(0)';
+        }
+        lastScrollTop = scrollTop;
+    });
+    
+    // Add publication abstract toggle functionality
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('abstract')) {
+            e.preventDefault();
+            // This would toggle abstract visibility in a real implementation
+            console.log('Abstract toggle clicked');
+        }
+    });
 });
