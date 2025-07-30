@@ -207,7 +207,7 @@ def generate_publication_html(pub, pub_type):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pub["title"]} - Dr. Abolfazl Zaraki</title>
+    <title>{pub["title"]} - Dr Abolfazl Zaraki</title>
     <link rel="stylesheet" href="../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -302,7 +302,7 @@ def generate_publication_html(pub, pub_type):
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="../../index.html" class="nav-brand">Dr. Abolfazl Zaraki</a>
+            <a href="../../index.html" class="nav-brand">Dr Abolfazl Zaraki</a>
             <ul class="nav-menu">
                 <li><a href="../../index.html#about">About</a></li>
                 <li><a href="../../index.html#education">Education</a></li>
@@ -373,7 +373,7 @@ def generate_publication_html(pub, pub_type):
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Dr. Abolfazl Zaraki. All rights reserved.</p>
+            <p>&copy; 2024 Dr Abolfazl Zaraki. All rights reserved.</p>
         </div>
     </footer>
 

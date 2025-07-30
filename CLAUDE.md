@@ -6,48 +6,111 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a GitHub Pages repository (azaraki.github.io) for Dr. Abolfazl Zaraki's academic profile website. The site serves as a professional academic portfolio showcasing research, publications, and career achievements.
 
-## Current State
-
-- **Branch**: master (no commits yet, but content being developed)
-- **Type**: GitHub Pages repository (personal academic site)
-- **Owner**: Dr. Abolfazl Zaraki (PhD, FHEA) - Senior Lecturer in Robotics and AI at University of Hertfordshire
-- **Purpose**: Academic profile website with CV, publications, and research information
-
 ## Site Architecture
 
-This is a static academic website with the following structure:
-- **index.html**: Main landing page with profile overview
-- **CSS files**: Modern academic styling with responsive design
-- **CV content**: Based on "CV-Abolfazl Zaraki-UH .pdf" source document
-- **Publications**: Integrated with Google Scholar profile (https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en)
+This is a static academic website with the following key components:
 
-## Key Content Areas
+### Core Pages
+- **index.html**: Main landing page with profile overview, recent highlights, and navigation
+- **publications.html**: Complete publication list with filtering and search capabilities
+- **research.html**: Research interests and current projects
+- **teaching.html**: Course information and teaching philosophy
+- **students.html**: Student supervision and opportunities
+- **experience.html**: Academic and professional experience
 
-The website includes these main sections:
-- **About**: Personal introduction and current position
-- **Research Interests**: AI, Robotics, Human-Robot Interaction, Machine Learning
-- **Education**: PhD in Automatic Robotics and Bioengineering, Master's in Mechatronics
-- **Experience**: Academic positions across UK, Italy, Malaysia, and Germany
-- **Publications**: Journal articles, book chapters, conference papers
-- **Teaching**: Current and past courses at University of Hertfordshire and Cardiff University
-- **Skills**: Technical skills in Python, C++, ROS2, AI/ML frameworks
+### Generated Content System
+- **generate_publications.py**: Python script that automatically generates individual publication pages
+- **publications/**: Directory containing auto-generated pages for each publication
+- **publication-template.html**: Template for individual publication pages (if present)
 
-## Development Environment
+### Static Assets
+- **styles.css**: Modern academic styling with responsive design (Bilge Mutlu inspired)
+- **script.js**: JavaScript for navigation, smooth scrolling, and responsive behavior
+- **Abolfazl_Zaraki.webp**: Profile photo
 
-- **IDE**: WebStorm/IntelliJ IDEA (`.idea/` directory present)
-- **Claude Code**: Configured with local permissions in `.claude/settings.local.json`
-- **Deployment**: GitHub Pages (static hosting)
+## Key Development Commands
 
-## Content Source
+### Publication Management
+```bash
+# Generate all individual publication pages
+python3 generate_publications.py
 
-- **CV Source**: "CV-Abolfazl Zaraki-UH .pdf" contains the authoritative information
-- **Scholar Profile**: Publications and citations data from Google Scholar
-- **Style**: Modern academic theme with professional layout
+# The script reads publication data from its internal database and creates:
+# - Individual HTML pages for each publication in publications/[folder-name]/index.html
+# - Proper navigation and back-links
+# - BibTeX citations with copy functionality
+# - Keywords and metadata display
+```
+
+### Development Workflow
+```bash
+# No build process required - direct file editing
+# Test locally by opening index.html in browser
+# GitHub Pages automatically serves from repository root
+
+# For development testing:
+python3 -m http.server 8000
+# Then visit http://localhost:8000
+```
+
+## Code Architecture
+
+### Publication Generation System
+The `generate_publications.py` script contains a comprehensive database of publications structured in three categories:
+- **journal_articles**: Peer-reviewed journal publications
+- **book_chapters**: Book chapters and proceedings
+- **conference_papers**: Conference presentations and papers
+
+Each publication entry includes:
+- Title, authors, venue, year
+- Folder name for URL structure
+- Keywords for categorization
+- Metadata (volume, pages, location)
+
+### Styling System
+The site uses a cohesive design system with:
+- **CSS Variables**: Consistent color scheme and spacing
+- **Responsive Grid**: Mobile-first design approach
+- **Component Classes**: Reusable UI components (cards, buttons, navigation)
+- **Academic Theme**: Professional presentation suitable for academic portfolios
+
+### Navigation & UX
+- **Mobile-responsive**: Hamburger menu and adaptive layouts
+- **Smooth scrolling**: Enhanced navigation experience
+- **Active section highlighting**: Visual feedback for current page section
+- **Error handling**: Graceful degradation for missing images
+
+## Content Integration
+
+### Google Scholar Integration
+- Publications link to Google Scholar profile: https://scholar.google.co.uk/citations?user=ZTO-zqgAAAAJ&hl=en
+- Citation metrics and h-index pulled from Scholar profile
+- Individual publications can link to Scholar entries
+
+### CV Integration
+- Content derived from "CV-Abolfazl Zaraki-UH .pdf" (excluded from repository)
+- Structured data maintained in Python script for consistency
+- Professional formatting matching academic standards
 
 ## Development Notes
 
-- This is a professional academic site that will be publicly accessible
-- Content should maintain academic standards and professional presentation
-- Static files are served directly from the repository root
-- No build process required - pure HTML/CSS/JS for GitHub Pages compatibility
+### File Organization
+- Static files served directly from repository root
+- Publication pages organized in subdirectories for clean URLs
+- All external dependencies loaded via CDN (no local node_modules)
+
+### Deployment
+- GitHub Pages automatic deployment from main branch
+- No build step required - pure static HTML/CSS/JS
+- Custom domain support available through GitHub Pages settings
+
+### Content Updates
+- Publication data: Update `generate_publications.py` and regenerate pages
+- General content: Direct HTML editing in respective page files
+- Styling changes: Modify `styles.css` with CSS variables for consistency
+
+### Professional Standards
+- Academic presentation with clean, professional styling
 - Responsive design for desktop and mobile viewing
+- Accessibility considerations in navigation and content structure
+- SEO-friendly structure with proper meta tags and semantic HTML
